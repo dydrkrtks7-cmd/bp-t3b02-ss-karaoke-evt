@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 · 상수 가라오케 이벤트</title>
+    <meta name="description" content="찐한 노래방 경험담, 내가 상수 가라오케에서 깨달은 것들. 거리 감성 그대로, 포장 없는 후기. 예약은 010-6279-0862.">
+    <meta name="keywords" content="상수 가라오케, 상수 가라오케 이벤트, 상수 노래방, 홍대 가라오케, 언더그라운드 노래방, 블로그 후기">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://t3b02-ss-karaoke-evt.pages.dev/blog/">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+
+    <!-- OG & Twitter -->
+    <meta property="og:title" content="블로그 · 상수 가라오케 이벤트 | 찐한 후기">
+    <meta property="og:description" content="포장 없이 푸는 상수 가라오케 이벤트의 진짜. 예약은 010-6279-0862.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://t3b02-ss-karaoke-evt.pages.dev/blog/">
+    <meta property="og:image" content="https://t3b02-ss-karaoke-evt.pages.dev/assets/og-blog.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="블로그 · 상수 가라오케 이벤트 | 찐한 후기">
+    <meta name="twitter:description" content="포장 없이 푸는 상수 가라오케 이벤트의 진짜. 예약은 010-6279-0862.">
+
+    <style>
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #0c0c0c;
+            color: #e0e0e0;
+            line-height: 1.6;
+            position: relative;
+        }
+        /* Raw texture: repeating diagonal lines */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(255, 255, 255, 0.02) 0px,
+                rgba(255, 255, 255, 0.02) 2px,
+                transparent 2px,
+                transparent 8px
+            );
+            pointer-events: none;
+            z-index: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5em;
+        }
+        h1 { font-size: 3rem; line-height: 1.1; color: #ff2a6d; text-shadow: 0 0 10px #ff2a6d88; }
+        h2 { font-size: 2rem; border-left: 6px solid #ff2a6d; padding-left: 15px; margin-top: 1.5em; }
+        h3 { font-size: 1.4rem; margin-top: 1.2em; }
+        p { margin-bottom: 1em; font-size: 1rem; }
+        a { color: #0aefff; text-decoration: underline; text-underline-offset: 3px; }
+        a:hover { color: #ff2a6d; text-decoration: none; background: #0aefff22; }
+        strong { color: #ff2a6d; font-weight: 700; }
+        /* Layout */
+        nav {
+            background: #111;
+            border-bottom: 3px solid #ff2a6d;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+        }
+        nav a {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #0aefff;
+            text-decoration: none;
+            padding: 5px 12px;
+            border: 2px solid transparent;
+            transition: 0.2s;
+        }
+        nav a:hover {
+            border-color: #ff2a6d;
+            background: #ff2a6d22;
+        }
+        /* Hamburger menu fallback (mobile only) */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+        .hero {
+            padding: 80px 0 40px;
+            text-align: center;
+            border-bottom: 2px dashed #ff2a6d;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.3em;
+        }
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 1.5em;
+            font-size: 1.15rem;
+            color: #aaa;
+        }
+        .blog-post {
+            background: #141414;
+            padding: 40px 30px;
+            margin: 40px 0;
+            border: 2px solid #333;
+            position: relative;
+        }
+        .blog-post::before {
+            content: 'BLOG';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #0c0c0c;
+            padding: 0 10px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            color: #ff2a6d;
+            letter-spacing: 2px;
+        }
+        .blog-post h2 {
+            border-left: none;
+            padding-left: 0;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        .blog-post .meta {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 1.5em;
+            text-transform: uppercase;
+        }
+        .blog-post .content p:first-of-type::first-letter {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff2a6d;
+            float: left;
+            margin-right: 8px;
+            line-height: 1;
+        }
+        .blog-post blockquote {
+            border-left: 4px solid #0aefff;
+            padding-left: 20px;
+            margin: 1.5em 0;
+            font-style: italic;
+            color: #c0c0c0;
+        }
+        .blog-post .cta-link {
+            display: inline-block;
+            margin-top: 1.5em;
+            background: #ff2a6d;
+            color: #0c0c0c;
+            padding: 10px 25px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: none;
+            transition: 0.2s;
+        }
+        .blog-post .cta-link:hover {
+            background: #0aefff;
+            color: #0c0c0c;
+        }
+        footer {
+            background: #111;
+            border-top: 3px solid #0aefff;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 60px;
+        }
+        footer a {
+            color: #0aefff;
+        }
+        .tel-link {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff2a6d;
+            text-decoration: none;
+            border: 2px solid #ff2a6d;
+            padding: 8px 20px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .tel-link:hover {
+            background: #ff2a6d;
+            color: #0c0c0c;
+        }
+    </style>
+    <!-- JSON-LD: Article (for blog) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "상수 가라오케 이벤트, 진짜 재미는 따로 있다",
+        "description": "포장 없이 푸는 상수 가라오케 이벤트의 리얼 후기. 노래방의 본질을 찾아서.",
+        "author": {
+            "@type": "Person",
+            "name": "상수 가라오케 이벤트 블로그"
+        },
+        "datePublished": "2025-04-09",
+        "publisher": {
+            "@type": "Organization",
+            "name": "상수 가라오케 이벤트"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="/">홈</a></li>
+                <li><a href="/event/">이벤트</a></li>
+                <li><a href="/blog/" style="border-color: #ff2a6d; background: #ff2a6d22;">블로그</a></li>
+                <li><a href="/reservation/">예약</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Blog Header) -->
+    <section class="hero">
+        <div class="container">
+            <h1>블로그</h1>
+            <p>거리 감성 그대로, 포장 없이 던지는 찐한 이야기들. 상수 가라오케 이벤트를 진짜로 즐기는 법.</p>
+        </div>
+    </section>
+
+    <!-- Main Content: Single Blog Post -->
+    <main class="container">
+        <article class="blog-post">
+            <h2>상수 가라오케 이벤트, 진짜 재미는 따로 있다</h2>
+            <div class="meta">2025.04.09 · by 상수 가라오케 · 3분 읽기</div>
+            <div class="content">
+                <p>솔직히 나는 노래방 이벤트 같은 걸 별로 안 믿는 편이다. '이벤트'라는 말만 붙으면 왠지 비싸지고, 포장되고, 본질은 사라지더라. 그런데 지인이 억지로 끌고 간 상수 가라오케에서 내 편견이 깨졌다.</p>
+                <p>처음 들어갔을 때부터 느낌이 달랐다. 화려한 조명이나 인공적인 향기가 아니라, 낡은 콘크리트 벽과 삐걱거리는 마이크 스탠드. 거기엔 <strong>'진짜'</strong>가 있었다. 직원은 "여긴 이벤트가 따로 없어요. 그냥 우리 방식대로 놀면 돼요"라고 말했다. 그 '우리 방식'이라는 게 뭔지 궁금해졌다.</p>
+                <blockquote>
+                    "포장 없는 노래방이 이렇게 중독될 줄이야. 내 목이 터져라 부르고, 맥주는 테이블에 흥건히. 그게 다야."
+                </blockquote>
+                <p>알고 보니 이곳의 이벤트는 '이벤트'라는 이름의 <strong>반(反)이벤트</strong>였다. 정해진 시간에 무언가를 하는 게 아니라, 그날그날 손님들이 만들어내는 즉흥적인 퍼포먼스가 전부였다. 누군가는 기타를 치고, 누군가는 샤우팅을 하고. 나도 모르게 무대 위에 올라가 90년대 록발라드를 질러댔다. 주변에서 박수치는 소리가 울리는데, 그게 왠지 모르게 진짜였다.</p>
+                <p>물론 단점도 있다. 시설이 깔끔하진 않다. 화장실 문은 잘 안 닫히고, 리모컨은 가끔 먹통이 된다. 하지만 그런 게 오히려 <strong>매력</strong>으로 느껴진다. 완벽하지 않아서 사람냄새 나는 공간. 요즘 같은 시대에 이런 경험은 귀하다.</p>
+                <p>결론? 나는 이제 상수 가라오케 이벤트를 '진짜'라고 부르기로 했다. 거창한 이벤트보다, 그냥 사람들이 모여서 막 부르고 떠들 수 있는 공간. 그게 진정한 노래방의 본질 아닐까?</p>
+                <p>혹시 너도 가짜 이벤트에 지쳤다면, 한 번쯤 와봐. 예약은 전화로만 받는다고 하더라. 번호는 아래에 적어둔다.</p>
+            </div>
+            <a href="tel:010-6279-0862" class="cta-link">전화 예약 010-6279-0862</a>
+        </article>
+
+        <!-- 전화 링크 (하단 고정 느낌) -->
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="tel:010-6279-0862" class="tel-link">📞 010-6279-0862</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 상수 가라오케 이벤트 · 서울 마포구 상수동 · <a href="tel:010-6279-0862">010-6279-0862</a></p>
+            <p style="margin-top: 8px; font-size: 0.8rem; color: #666;">거리 감성 그대로, 쓸데없는 포장 없이.</p>
+        </div>
+    </footer>
+</body>
+</html>
